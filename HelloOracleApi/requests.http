@@ -1,0 +1,35 @@
+@baseUrl = http://localhost:5137
+
+### 1. Cek status API
+GET {{baseUrl}}/
+
+### 2. Ambil semua daftar to-do
+GET {{baseUrl}}/todos
+
+### 3. Tambah to-do baru
+POST {{baseUrl}}/todos
+Content-Type: application/json
+
+{
+  "title": "Belajar ReactJS dengan .NET 10 dan Oracle"
+}
+
+### 4. Test validasi kosong (harus 400 Bad Request)
+POST {{baseUrl}}/todos
+Content-Type: application/json
+
+{
+  "title": "   "
+}
+
+### 5. Update judul atau status selesai to-do (ganti angka 1 dengan ID yang ada)
+PUT {{baseUrl}}/todos/1
+Content-Type: application/json
+
+{
+  "title": "Setup Oracle Database Free di Windows",
+  "isCompleted": true
+}
+
+### 6. Hapus to-do berdasarkan ID (ganti angka 1 dengan ID yang ada)
+DELETE {{baseUrl}}/todos/1
