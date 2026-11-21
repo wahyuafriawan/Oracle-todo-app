@@ -21,7 +21,7 @@ var app = builder.Build();
 
 app.UseCors();
 
-app.MapGet("/", () => "Work Day, Staff & To-Do List API (.NET + Oracle)");
+app.MapGet("/", () => "Aplikasi Work Day, Staff & To-Do List API (.NET + Oracle)");
 
 // ================= STAFF =================
 

@@ -33,7 +33,7 @@ export default function App() {
   async function fetchStaffs() {
     try {
       const res = await fetch(`${API_BASE}/staffs`);
-      if (!res.ok) throw new Error('Gagal memuat daftar staff.');
+      if (!res.ok) throw new Error('Gagal memuat daftar staff!');
       const data = await res.json();
       setStaffs(data);
       if (data.length > 0 && !selectedStaffId) {
